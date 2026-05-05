@@ -3,58 +3,94 @@
 <head>
   <title>Shaabeki</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #0b0b0b;
-      color: white;
-      text-align: center;
+      background: #141615;
+      color: #ddd0c8;
+      font-family: 'Montserrat', sans-serif;
     }
 
     header {
-      padding: 40px 20px;
+      text-align: center;
+      padding: 60px 20px;
     }
 
-    img.logo {
-      max-width: 300px;
+    .logo {
+      width: 260px;
+      margin-bottom: 20px;
     }
 
     h1 {
       font-family: 'Playfair Display', serif;
-      color: #d4af37;
-      font-size: 40px;
+      color: #c88433;
+      font-size: 42px;
+      letter-spacing: 3px;
+      margin: 10px 0;
     }
 
     .tagline {
       font-size: 18px;
-      color: #ccc;
+      opacity: 0.8;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .hero h2 {
+      font-family: 'Playfair Display', serif;
+      color: #c88433;
+      font-size: 36px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: auto;
+      line-height: 1.6;
     }
 
     .btn {
+      margin-top: 30px;
       display: inline-block;
-      margin: 20px;
-      padding: 12px 25px;
-      border: 1px solid #d4af37;
-      color: #d4af37;
+      padding: 14px 30px;
+      border: 1px solid #c88433;
+      color: #c88433;
       text-decoration: none;
+      letter-spacing: 1px;
       transition: 0.3s;
     }
 
     .btn:hover {
-      background: #d4af37;
-      color: black;
+      background: #c88433;
+      color: #141615;
     }
 
-    section {
-      padding: 40px 20px;
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px;
+      gap: 30px;
+    }
+
+    .feature {
+      border: 1px solid #c88433;
+      padding: 20px;
+      width: 200px;
+      text-align: center;
     }
 
     footer {
-      padding: 20px;
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid #333;
       font-size: 14px;
-      color: #888;
     }
   </style>
 </head>
@@ -63,24 +99,35 @@
 
 <header>
   <img src="logo.png" class="logo">
+  <h1>SHAABEKI</h1>
+  <div class="tagline">Timeless Taste of Kolkata</div>
 </header>
-  
-<section>
-  <h2 style="color:#d4af37;">Indian Flavour</h2>
-  <p>Recipes passed down through generations, made with love.</p>
 
-  <a href="menu.pdf" class="btn">Menu</a>
+<section class="hero">
+  <h2>Indian Flavour</h2>
+  <p>
+    Recipes passed through generations, crafted with love,
+    bringing authentic Kolkata taste to your table.
+  </p>
+
+  <a href="menu.html" class="btn">VIEW MENU</a>
 </section>
 
-<section>
-  <h2 style="color:#d4af37;">Contact</h2>
-  <p>📞 07300904044</p>
-  <p>📧 shaabekifood@gmail.com</p>
-  <p>📍 North London</p>
+<section class="features">
+  <div class="feature">Fresh Ingredients</div>
+  <div class="feature">Authentic Recipes</div>
+  <div class="feature">Homemade Comfort</div>
+  <div class="feature">Prepared Weekly</div>
+</section>
+
+<section class="hero">
+  <h2>Order Now</h2>
+  <p>Call or WhatsApp to place your order</p>
+  <a href="https://wa.me/447300904044" class="btn">ORDER ON WHATSAPP</a>
 </section>
 
 <footer>
-  © Shaabeki
+  📞 07300904044 | 📧 shaabekifood@gmail.com | 📍 North London
 </footer>
 
 </body>
