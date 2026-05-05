@@ -3,35 +3,65 @@
 <head>
   <title>Menu - Shaabeki</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+
   <style>
     body {
-      background: #0b0b0b;
-      color: white;
-      font-family: Arial;
-      padding: 20px;
+      margin: 0;
+      background: #141615;
+      font-family: 'Montserrat', sans-serif;
+      color: #141615;
     }
 
     h1 {
       text-align: center;
-      color: #d4af37;
+      color: #c88433;
+      font-family: 'Playfair Display', serif;
+      margin: 30px 0;
     }
 
-    .menu-item {
+    .menu-container {
+      max-width: 900px;
+      margin: auto;
+      background: #ddd0c8;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    .item {
       display: flex;
       justify-content: space-between;
-      border-bottom: 1px solid #333;
-      padding: 10px 0;
+      border-bottom: 1px dotted #888;
+      padding: 12px 0;
+    }
+
+    .name {
+      font-weight: 500;
+    }
+
+    .desc {
+      font-size: 13px;
+      color: #333;
     }
 
     .price {
-      color: #d4af37;
+      color: #c88433;
+      font-weight: bold;
     }
 
     .section-title {
       margin-top: 30px;
-      color: #d4af37;
-      border-bottom: 1px solid #d4af37;
+      font-family: 'Playfair Display', serif;
+      color: #c88433;
+      border-bottom: 2px solid #c88433;
       padding-bottom: 5px;
+    }
+
+    .allergens {
+      font-size: 12px;
+      margin-top: 5px;
+      color: #444;
     }
   </style>
 </head>
@@ -40,24 +70,109 @@
 
 <h1>À La Carte</h1>
 
-<div class="menu-item"><span>Lamb Kosha</span><span class="price">£11.99</span></div>
-<div class="menu-item"><span>Shaabeki Chicken</span><span class="price">£8.99</span></div>
-<div class="menu-item"><span>Sorshe Salmon</span><span class="price">£8.99</span></div>
-<div class="menu-item"><span>Kolkata Fish Fry</span><span class="price">£4.49</span></div>
-<div class="menu-item"><span>Shahi Paneer</span><span class="price">£6.99</span></div>
-<div class="menu-item"><span>Ghugni</span><span class="price">£4.99</span></div>
-<div class="menu-item"><span>Kolkata Vegetable Chop</span><span class="price">£4.49</span></div>
-<div class="menu-item"><span>Pulao Rice</span><span class="price">£3.49</span></div>
-<div class="menu-item"><span>Plain Basmati Rice</span><span class="price">£1.99</span></div>
-<div class="menu-item"><span>Naan Bread</span><span class="price">£2.75</span></div>
+<div class="menu-container">
 
-<h1 class="section-title">Shaabeki Meal-Mish</h1>
+  <div class="item">
+    <div>
+      <div class="name">Lamb Kosha</div>
+      <div class="desc">Traditional lamb curry rich in aromatic spices</div>
+      <div class="allergens">(d, g, m, n, sd)</div>
+    </div>
+    <div class="price">£11.99</div>
+  </div>
 
-<div class="menu-item"><span>Lamb Kosha + Rice</span><span class="price">£8.99</span></div>
-<div class="menu-item"><span>Shaabeki Chicken + Rice</span><span class="price">£7.50</span></div>
-<div class="menu-item"><span>Sorshe Salmon + Rice</span><span class="price">£7.50</span></div>
-<div class="menu-item"><span>Shahi Paneer + Rice</span><span class="price">£5.99</span></div>
-<div class="menu-item"><span>Kolkata Fish Fry</span><span class="price">£7.99</span></div>
+  <div class="item">
+    <div>
+      <div class="name">Shaabeki Chicken</div>
+      <div class="desc">Signature style chicken curry</div>
+      <div class="allergens">(d, g, m, n, sd)</div>
+    </div>
+    <div class="price">£8.99</div>
+  </div>
+
+  <div class="item">
+    <div>
+      <div class="name">Sorshe Salmon</div>
+      <div class="desc">Salmon in mustard gravy</div>
+      <div class="allergens">(f, m, d, sd)</div>
+    </div>
+    <div class="price">£8.99</div>
+  </div>
+
+  <div class="item">
+    <div>
+      <div class="name">Kolkata Fish Fry</div>
+      <div class="desc">Crispy fried fish with dip</div>
+      <div class="allergens">(g, e, f, sd)</div>
+    </div>
+    <div class="price">£4.49</div>
+  </div>
+
+  <div class="item">
+    <div>
+      <div class="name">Shahi Paneer</div>
+      <div class="desc">Cottage cheese in creamy gravy</div>
+      <div class="allergens">(g, d, n, sd)</div>
+    </div>
+    <div class="price">£6.99</div>
+  </div>
+
+  <div class="item">
+    <div>
+      <div class="name">Ghugni (Vegan)</div>
+      <div class="desc">Spiced yellow peas curry</div>
+      <div class="allergens">(g, sd)</div>
+    </div>
+    <div class="price">£4.99</div>
+  </div>
+
+  <div class="item">
+    <div>
+      <div class="name">Vegetable Chop</div>
+      <div class="desc">Beetroot croquette</div>
+      <div class="allergens">(g, e, d, m, p, sd)</div>
+    </div>
+    <div class="price">£4.49</div>
+  </div>
+
+  <div class="item">
+    <div>
+      <div class="name">Pulao Rice</div>
+      <div class="desc">Fragrant basmati rice with spices</div>
+      <div class="allergens">(d, sd)</div>
+    </div>
+    <div class="price">£3.49</div>
+  </div>
+
+  <div class="item">
+    <div>
+      <div class="name">Plain Basmati Rice</div>
+      <div class="desc">Premium basmati rice</div>
+    </div>
+    <div class="price">£1.99</div>
+  </div>
+
+  <div class="item">
+    <div>
+      <div class="name">Naan Bread</div>
+      <div class="desc">Garlic / Peshwari / Keema / Paratha</div>
+      <div class="allergens">(g, e, d, n, sd)</div>
+    </div>
+    <div class="price">£2.75</div>
+  </div>
+
+  <div class="section-title">Shaabeki Meal-Mish</div>
+
+  <div class="item"><span>Lamb + Rice</span><span class="price">£8.99</span></div>
+  <div class="item"><span>Chicken + Rice</span><span class="price">£7.50</span></div>
+  <div class="item"><span>Salmon + Rice</span><span class="price">£7.50</span></div>
+  <div class="item"><span>Paneer + Rice</span><span class="price">£5.99</span></div>
+  <div class="item"><span>Fish Fry</span><span class="price">£7.99</span></div>
+
+  <div class="section-title">Allergens Info</div>
+  <p>(n) nuts, (e) eggs, (p) peanuts, (f) fish, (d) dairy, (m) mustard, (g) gluten, (sd) sulphur dioxide</p>
+
+</div>
 
 </body>
 </html>
