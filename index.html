@@ -15,37 +15,134 @@
       font-family: 'Montserrat', sans-serif;
     }
 
-    header {
-      text-align: center;
-      padding: 40px 20px 10px;
-    }
+ .hero-banner {
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(20,22,21,0.82), rgba(20,22,21,0.92)),
+    radial-gradient(circle at top, rgba(200,132,51,0.15), transparent 60%),
+    #1e1c21;
 
-    .logo {
-      width: 400px;
-      max-width: 90%;
-      height: auto;
-      margin-bottom: 10px;
-      display: block;
-      margin: 0 auto 10px;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
 
-    h1 {
-      font-family: 'Playfair Display', serif;
-      color: #c88433;
-      font-size: 42px;
-      letter-spacing: 3px;
-      margin: 10px 0;
-    }
+  animation: fadeIn 1.5s ease;
+}
 
-    .tagline {
-      font-size: 18px;
-      opacity: 0.8;
-    }
+.overlay {
+  max-width: 800px;
+}
 
-    .hero {
-      text-align: center;
-      padding: 20px 20px 20px;
-    }
+.logo {
+  width: 380px;
+  max-width: 92%;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  color: #c88433;
+  font-size: 54px;
+  letter-spacing: 6px;
+  margin: 0;
+}
+
+.tagline {
+  color: #ddd0c8;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+.gold-line {
+  width: 120px;
+  height: 2px;
+  background: #c88433;
+  margin: 30px auto;
+}
+
+.hero-banner h2 {
+  font-family: 'Playfair Display', serif;
+  color: #c88433;
+  font-size: 44px;
+  margin-bottom: 10px;
+}
+
+.hero-text {
+  color: #ddd0c8;
+  line-height: 1.8;
+  font-size: 18px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.hero-buttons {
+  margin-top: 40px;
+}
+
+.btn {
+  margin: 10px;
+  display: inline-block;
+  padding: 14px 34px;
+  border: 1px solid #c88433;
+  color: #c88433;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background: #c88433;
+  color: #141615;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(200,132,51,0.25);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .logo {
+    width: 320px;
+  }
+
+  h1 {
+    font-size: 40px;
+    letter-spacing: 3px;
+  }
+
+  .hero-banner h2 {
+    font-size: 34px;
+  }
+
+  .hero-text {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .btn {
+    width: 85%;
+    max-width: 260px;
+  }
+
+}
 
     .hero h2 {
       font-family: 'Playfair Display', serif;
@@ -111,15 +208,34 @@
   <img src="logo.png" class="logo">
 </header>
 
-<section class="hero">
-  <h2>Indian Flavour</h2>
-  <p>
-    Recipes passed through generations, crafted with love,
-    bringing authentic Kolkata taste to your table.
-  </p>
+<section class="hero-banner">
 
-  <a href="menu.html" class="btn">VIEW MENU</a>
-  <a href="menu.pdf" class="btn">VIEW MORE</a>
+  <div class="overlay">
+
+    <img src="logo.png" class="logo">
+
+    <h1>SHAABEKI</h1>
+
+    <p class="tagline">
+      Timeless Taste of Kolkata
+    </p>
+
+    <div class="gold-line"></div>
+
+    <h2>Indian Flavour</h2>
+
+    <p class="hero-text">
+      Recipes passed through generations,
+      crafted with love and authentic Kolkata flavours.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="menu.html" class="btn">VIEW MENU</a>
+      <a href="menu.pdf" class="btn">VIEW MORE</a>
+    </div>
+
+  </div>
+
 </section>
 
 <section class="hero">
