@@ -1,257 +1,663 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Shaabeki</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+# Premium `index.html` for Shaabeki
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shaabeki | Timeless Taste of Kolkata</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    body {
+
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
       background: #1e1c21;
       color: #ddd0c8;
       font-family: 'Montserrat', sans-serif;
+      overflow-x: hidden;
+      background-image:
+        radial-gradient(rgba(200,132,51,0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.01), rgba(0,0,0,0.1));
+      background-size: 30px 30px, 100% 100%;
     }
 
- .hero-banner {
-  min-height: 100vh;
-  background:
-    linear-gradient(rgba(20,22,21,0.82), rgba(20,22,21,0.92)),
-    radial-gradient(circle at top, rgba(200,132,51,0.15), transparent 60%),
-    #1e1c21;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 40px 20px;
-
-  animation: fadeIn 1.5s ease;
-}
-
-.overlay {
-  max-width: 800px;
-}
-
-.logo {
-  width: 380px;
-  max-width: 92%;
-  height: auto;
-  display: block;
-  margin: 0 auto 10px;
-}
-
-h1 {
-  font-family: 'Playfair Display', serif;
-  color: #c88433;
-  font-size: 54px;
-  letter-spacing: 6px;
-  margin: 0;
-}
-
-.tagline {
-  color: #ddd0c8;
-  font-size: 20px;
-  letter-spacing: 1px;
-  margin-top: 10px;
-  opacity: 0.9;
-}
-
-.gold-line {
-  width: 120px;
-  height: 2px;
-  background: #c88433;
-  margin: 30px auto;
-}
-
-.hero-banner h2 {
-  font-family: 'Playfair Display', serif;
-  color: #c88433;
-  font-size: 44px;
-  margin-bottom: 10px;
-}
-
-.hero-text {
-  color: #ddd0c8;
-  line-height: 1.8;
-  font-size: 18px;
-  max-width: 600px;
-  margin: auto;
-}
-
-.hero-buttons {
-  margin-top: 40px;
-}
-
-.btn {
-  margin: 10px;
-  display: inline-block;
-  padding: 14px 34px;
-  border: 1px solid #c88433;
-  color: #c88433;
-  text-decoration: none;
-  letter-spacing: 2px;
-  transition: all 0.3s ease;
-  font-size: 14px;
-}
-
-.btn:hover {
-  background: #c88433;
-  color: #141615;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(200,132,51,0.25);
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-
-  .logo {
-    width: 320px;
-  }
-
-  h1 {
-    font-size: 40px;
-    letter-spacing: 3px;
-  }
-
-  .hero-banner h2 {
-    font-size: 34px;
-  }
-
-  .hero-text {
-    font-size: 16px;
-    padding: 0 10px;
-  }
-
-  .btn {
-    width: 85%;
-    max-width: 260px;
-  }
-
-}
-
-    .hero h2 {
-      font-family: 'Playfair Display', serif;
-      color: #c88433;
-      font-size: 36px;
+    a {
+      text-decoration: none;
     }
 
-    .hero h3 {
-      font-family: 'Playfair Display', serif;
-      color: #c88433;
-      font-size: 25px;
+    /* NAVBAR */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(20,22,21,0.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(200,132,51,0.15);
     }
 
-    .hero p {
-      max-width: 600px;
+    .nav-container {
+      max-width: 1300px;
       margin: auto;
-      line-height: 1.6;
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
+
+    .brand {
+      color: #c88433;
+      font-family: 'Cinzel', serif;
+      font-size: 22px;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      color: #ddd0c8;
+      font-size: 14px;
+      letter-spacing: 1px;
+      transition: 0.3s ease;
+      position: relative;
+    }
+
+    .nav-links a:hover {
+      color: #c88433;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: #c88433;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      padding: 60px 20px;
+
+      background:
+        linear-gradient(rgba(20,22,21,0.72), rgba(20,22,21,0.92)),
+        radial-gradient(circle at top, rgba(200,132,51,0.22), transparent 60%),
+        #1e1c21;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        repeating-linear-gradient(
+          90deg,
+          rgba(255,255,255,0.015),
+          rgba(255,255,255,0.015) 2px,
+          transparent 2px,
+          transparent 8px
+        );
+      opacity: 0.15;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      animation: fadeUp 1.3s ease;
+      max-width: 900px;
+    }
+
+    .logo {
+      width: 430px;
+      max-width: 95%;
+      margin-bottom: 10px;
+      filter: drop-shadow(0 0 20px rgba(255,255,255,0.08));
+    }
+
+    .hero h1 {
+      color: #c88433;
+      font-family: 'Cinzel', serif;
+      font-size: 60px;
+      letter-spacing: 8px;
+      margin-bottom: 12px;
+    }
+
+    .tagline {
+      color: #ddd0c8;
+      font-size: 20px;
+      letter-spacing: 1px;
+      opacity: 0.92;
+    }
+
+    .gold-divider {
+      width: 140px;
+      height: 2px;
+      background: #c88433;
+      margin: 34px auto;
+      box-shadow: 0 0 15px rgba(200,132,51,0.35);
+    }
+
+    .hero-title {
+      font-family: 'Cinzel', serif;
+      font-size: 48px;
+      color: #c88433;
+      margin-bottom: 20px;
+    }
+
+    .hero-text {
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.9;
+      color: #ddd0c8;
+      font-size: 18px;
+    }
+
+    .hero-buttons {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    /* BUTTONS */
 
     .btn {
-      margin-top: 30px;
-      display: inline-block;
-      padding: 14px 30px;
+      padding: 15px 34px;
       border: 1px solid #c88433;
       color: #c88433;
-      text-decoration: none;
-      letter-spacing: 1px;
-      transition: 0.3s;
+      font-size: 14px;
+      letter-spacing: 2px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.35s ease;
+      background: transparent;
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -120%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.2),
+        transparent
+      );
+      transition: 0.8s;
+    }
+
+    .btn:hover::before {
+      left: 120%;
     }
 
     .btn:hover {
       background: #c88433;
       color: #1e1c21;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(200,132,51,0.28);
     }
 
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 40px;
-      gap: 30px;
+    /* SECTION */
+
+    section {
+      padding: 100px 24px;
     }
 
-    .feature {
-      border: 1px solid #c88433;
-      padding: 20px;
-      width: 200px;
+    .section-container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-heading h2 {
+      color: #c88433;
+      font-family: 'Cinzel', serif;
+      font-size: 42px;
+      margin-bottom: 18px;
+    }
+
+    .section-heading p {
+      color: #ddd0c8;
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.8;
+    }
+
+    /* MENU CARDS */
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+    }
+
+    .menu-card {
+      background: #ddd0c8;
+      border-radius: 18px;
+      overflow: hidden;
+      transition: 0.4s ease;
+      position: relative;
+      color: #1e1c21;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 18px 45px rgba(0,0,0,0.35);
+    }
+
+    .menu-image {
+      height: 240px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .card-content {
+      padding: 26px;
+    }
+
+    .card-content h3 {
+      color: #c88433;
+      font-family: 'Cinzel', serif;
+      margin-bottom: 12px;
+      font-size: 24px;
+    }
+
+    .card-content p {
+      line-height: 1.7;
+      margin-bottom: 16px;
+      color: #333;
+    }
+
+    .price {
+      color: #c88433;
+      font-weight: 700;
+      font-size: 22px;
+    }
+
+    /* GALLERY */
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 18px;
+      position: relative;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      display: block;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .gallery-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.45), transparent);
+    }
+
+    /* INSTAGRAM */
+
+    .instagram-box {
+      background: linear-gradient(135deg, rgba(200,132,51,0.08), rgba(255,255,255,0.02));
+      border: 1px solid rgba(200,132,51,0.18);
+      border-radius: 24px;
+      padding: 50px;
       text-align: center;
     }
+
+    .instagram-box h3 {
+      color: #c88433;
+      font-family: 'Cinzel', serif;
+      font-size: 36px;
+      margin-bottom: 18px;
+    }
+
+    .instagram-box p {
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    /* FOOTER */
 
     footer {
+      padding: 40px 24px;
       text-align: center;
-      padding: 30px;
-      border-top: 1px solid #333;
-      font-size: 14px;
+      border-top: 1px solid rgba(200,132,51,0.12);
+      color: #b7aaa1;
+      line-height: 2;
     }
+
+    /* WHATSAPP FLOAT */
+
+    .whatsapp-float {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background: #25D366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      color: white;
+      z-index: 9999;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      transition: 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+    }
+
+    /* ANIMATION */
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 768px) {
+
+      .nav-links {
+        gap: 16px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .logo {
+        width: 360px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+        letter-spacing: 4px;
+      }
+
+      .hero-title {
+        font-size: 34px;
+      }
+
+      .hero-text {
+        font-size: 16px;
+      }
+
+      .section-heading h2 {
+        font-size: 34px;
+      }
+
+      .instagram-box {
+        padding: 34px 24px;
+      }
+
+    }
+
   </style>
 </head>
 
 <body>
 
-<header>
-  <img src="logo.png" class="logo">
-</header>
+  <!-- NAVBAR -->
 
-<section class="hero-banner">
+  <nav class="navbar">
+    <div class="nav-container">
 
-  <div class="overlay">
+      <div class="brand">SHAABEKI</div>
 
-    <img src="logo.png" class="logo">
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </div>
 
-    <h1>SHAABEKI</h1>
+    </div>
+  </nav>
 
-    <p class="tagline">
-      Timeless Taste of Kolkata
-    </p>
 
-    <div class="gold-line"></div>
+  <!-- HERO -->
 
-    <h2>Indian Flavour</h2>
+  <section class="hero" id="home">
 
-    <p class="hero-text">
-      Recipes passed through generations,
-      crafted with love and authentic Kolkata flavours.
-    </p>
+    <div class="hero-content">
 
-    <div class="hero-buttons">
-      <a href="menu.html" class="btn">VIEW MENU</a>
-      <a href="menu.pdf" class="btn">VIEW MORE</a>
+      <img src="logo.png" class="logo" alt="Shaabeki Logo">
+
+      <h1>SHAABEKI</h1>
+
+      <div class="tagline">
+        Timeless Taste of Kolkata
+      </div>
+
+      <div class="gold-divider"></div>
+
+      <div class="hero-title">
+        Indian Flavour
+      </div>
+
+      <p class="hero-text">
+        Recipes passed through generations, handcrafted with love and inspired by the rich culinary heritage of Kolkata.
+        Experience authentic flavours made fresh every week.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="menu.html" class="btn">VIEW MENU</a>
+        <a href="menu.pdf" class="btn">VIEW MORE</a>
+      </div>
+
     </div>
 
-  </div>
+  </section>
 
-</section>
 
-<section class="hero">
-  <h2>Order Now</h2>
-  <a href="tel:+447300904044" class="btn">CALL 07300904044</a>
-  <a href="https://wa.me/447300904044" class="btn">ORDER ON WHATSAPP</a>
-</section>
+  <!-- FEATURED MENU -->
 
-<section class="hero">
-  <h3>SCAN TO JOIN WHATSAPP GROUP</h3>
-  <img src="WhatsApp QR.jp">
-</section>
+  <section id="menu">
 
-<footer>
-  📞 07300904044 | 📧 shaabekifood@gmail.com | 📍 North London
-</footer>
+    <div class="section-container">
+
+      <div class="section-heading">
+        <h2>Featured Dishes</h2>
+        <p>
+          Rich flavours, authentic recipes, and handcrafted comfort food inspired by Kolkata traditions.
+        </p>
+      </div>
+
+      <div class="menu-grid">
+
+        <div class="menu-card">
+          <div class="menu-image" style="background-image:url('https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?q=80&w=1200&auto=format&fit=crop');"></div>
+
+          <div class="card-content">
+            <h3>Lamb Kosha</h3>
+            <p>Traditional lamb curry slow-cooked with aromatic spices and rich flavour.</p>
+            <div class="price">£11.99</div>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-image" style="background-image:url('https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=1200&auto=format&fit=crop');"></div>
+
+          <div class="card-content">
+            <h3>Shaabeki Chicken</h3>
+            <p>Signature house-style chicken curry inspired by timeless Kolkata recipes.</p>
+            <div class="price">£8.99</div>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-image" style="background-image:url('https://images.unsplash.com/photo-1631452180519-c014fe946bc7?q=80&w=1200&auto=format&fit=crop');"></div>
+
+          <div class="card-content">
+            <h3>Sorshe Salmon</h3>
+            <p>Fresh salmon in mustard gravy with authentic Bengali flavours.</p>
+            <div class="price">£8.99</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- GALLERY -->
+
+  <section id="gallery">
+
+    <div class="section-container">
+
+      <div class="section-heading">
+        <h2>Food Gallery</h2>
+        <p>
+          A glimpse into handcrafted dishes prepared fresh with premium ingredients and authentic spices.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?q=80&w=1200&auto=format&fit=crop">
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=1200&auto=format&fit=crop">
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?q=80&w=1200&auto=format&fit=crop">
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop">
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- INSTAGRAM -->
+
+  <section>
+
+    <div class="section-container">
+
+      <div class="instagram-box">
+
+        <h3>Follow Us On Instagram</h3>
+
+        <p>
+          Stay updated with fresh weekly menus, special dishes, and handcrafted Bengali flavours.
+        </p>
+
+        <a href="https://instagram.com/shaabeki" target="_blank" class="btn">
+          @SHAABEKI
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <footer id="contact">
+
+    <div>
+      📞 07300904044
+    </div>
+
+    <div>
+      📧 shaabekifood@gmail.com
+    </div>
+
+    <div>
+      📍 North London
+    </div>
+
+    <br>
+
+    <div>
+      © Shaabeki — Timeless Taste of Kolkata
+    </div>
+
+  </footer>
+
+
+  <!-- WHATSAPP FLOAT -->
+
+  <a href="https://wa.me/447300904044" class="whatsapp-float" target="_blank">
+    ✆
+  </a>
 
 </body>
 </html>
